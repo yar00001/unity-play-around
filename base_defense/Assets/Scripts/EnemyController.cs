@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour {
 	public GameObject[] bots;
 	// Starting point
 	public GameObject nextCheckpoint;
+	// Ending point
+	public GameObject baseCheckpoint;
 	// Choose the Enemy to Spawn
 	GameObject toSpawn;
 
@@ -21,6 +23,7 @@ public class EnemyController : MonoBehaviour {
 		newEnemy.transform.parent = this.gameObject.transform;
 		EnemyScript enemyScript = newEnemy.GetComponent<EnemyScript>();
 		enemyScript.nextCheckpoint = nextCheckpoint;
+		enemyScript.baseCheckpoint = baseCheckpoint;
 	}
 
 	void Start () {

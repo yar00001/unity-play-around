@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class CheckPointGizmos : MonoBehaviour {
 
-/// <summary>
+	private Transform targetCheckpoint;
+
+	/// <summary>
 	/// Callback to draw gizmos that are pickable and always drawn.
 	/// </summary>
 	void OnDrawGizmos()
 	{
-		Gizmos.color = Color.yellow;
-		Gizmos.DrawSphere(transform.position, 0.2f);
+		// Connect the checkpoints with a line
+		if (this.GetComponent<CheckPointController>().nextCheckpoint) {
+			Gizmos.color = Color.yellow;
+			Gizmos.DrawSphere(transform.position, 0.2f);
+			targetCheckpoint = this.GetComponent<CheckPointController>().nextCheckpoint.transform;
+			Gizmos.DrawLine(transform.position, targetCheckpoint.position);
+		} else {
+			Gizmos.color = Color.green;
+			Gizmos.DrawSphere(transform.position, 0.2f);
+		}
 	}
 }

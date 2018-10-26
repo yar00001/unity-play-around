@@ -12,11 +12,11 @@ public class EnemyGizmos : MonoBehaviour {
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
-		Gizmos.DrawCube(transform.position, new Vector2(0.5f, 0.5f));
+		Gizmos.DrawSphere(transform.position, 0.2f);
 
 		if (this.GetComponent<EnemyController>().nextCheckpoint != null) {
 			Gizmos.color = Color.red;
-			Gizmos.DrawCube(transform.position, new Vector2(0.2f, 0.2f));
+			Gizmos.DrawSphere(transform.position, 0.2f);
 			targetCheckpoint = this.GetComponent<EnemyController>().nextCheckpoint.transform;
 			Gizmos.DrawLine(transform.position, targetCheckpoint.position);
 		}

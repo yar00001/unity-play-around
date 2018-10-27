@@ -24,15 +24,12 @@ public class EnemyScript : MonoBehaviour {
 		// when we get to the end of the path
 		if (transform.position == baseCheckpoint.transform.position) {
 			// nextCheckpoint = null;
-			Debug.Log("got to the end point!!");
 			hit();
 		}
 		// when we get to the checkpoint, pick the next one
 		else if (transform.position == nextCheckpoint.transform.position) {
-			Debug.Log("End of the checkpoint! " + nextCheckpoint.name);
 
 			nextCheckpoint = nextCheckpoint.GetComponent<CheckPointController>().nextCheckpoint;
-			Debug.Log("Moving to the next checkpoint: " + nextCheckpoint.name);
 		}
 	}
 

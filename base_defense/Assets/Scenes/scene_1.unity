@@ -534,6 +534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bots:
+  - {fileID: 1748337586935228, guid: df21c0359208e4cee93ad08419f0000b, type: 2}
   - {fileID: 1366381266760286, guid: b0cf93f72d22048f0a61b5f3a5fdacd9, type: 2}
   nextCheckpoint: {fileID: 24522080}
   baseCheckpoint: {fileID: 843049036}

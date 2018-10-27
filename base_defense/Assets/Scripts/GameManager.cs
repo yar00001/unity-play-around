@@ -8,8 +8,10 @@ using UnityEngine;
  */
 public class GameManager : MonoBehaviour {
 	// Enemy options
-	public int totalWaveNumber = 20;
-	public int avgWaveLength = 15;
+	public int totalWaveNumber = 2;			// number of totaly type change
+	public int waveLength = 4;				// number of enemies in each wave
+	public float maxEnemyReleaseDelay = 1;	// delay between same enemy type
+	public float waveDelay = 3;				// new enemy type
 	// Player options
 	public int playerMaxHP = 20;
 	// Managing pause/play
@@ -23,8 +25,6 @@ public class GameManager : MonoBehaviour {
 		if (playerMaxHP <= 0) {
 			Time.timeScale = 0;		// pause the game
 		}
-
-		Debug.Log("updatd base HP: " + playerMaxHP);
 	}
 
 	/// <summary>

@@ -36,7 +36,7 @@ public class EnemyScript : MonoBehaviour {
 	void hit() {
 		// damage the base
 		GameManager.gameManager.damageBase(1);
-		// Removing the Object his script is in (prefab object)
+		// Removing the Object this script is in (prefab object)
 		// If you use Destory(this), only the script is removed but the object
 		// remains at the scene: https://answers.unity.com/questions/1129475/this-vs-gameobject.html
 		Destroy(gameObject);

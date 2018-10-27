@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour {
 	// Starting point
 	public GameObject nextCheckpoint;
 	// Ending point
-	public GameObject baseCheckpoint;
+	[HideInInspector] public GameObject baseCheckpoint;
 	// Choose the Enemy to Spawn
 	GameObject toSpawn;
 
@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour {
 			enemyScript.baseCheckpoint = baseCheckpoint;
 
 			// ToDo: enemyDelay should be read from EnemyScript
-			nextEnemy = Time.time + GameManager.gameManager.maxEnemyReleaseDelay;
+			nextEnemy = Time.time + Random.Range(1, GameManager.gameManager.maxEnemyReleaseDelay);
 
 			released++;
 		}
@@ -53,7 +53,8 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void Start () {
-		// Init
+		// Pick the base
+		baseCheckpoint = GameObject.FindGameObjectWithTag("basePoint");
 
 		// Select Initial Enemy Type
 		pickEnemy();

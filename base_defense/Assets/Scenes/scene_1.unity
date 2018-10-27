@@ -402,6 +402,10 @@ Prefab:
       propertyPath: m_Name
       value: BasePoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1475965427629530, guid: 24c2611352e744dd6a0da8479e30d478, type: 2}
+      propertyPath: m_TagString
+      value: basePoint
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114149562384585312, guid: 24c2611352e744dd6a0da8479e30d478, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 24c2611352e744dd6a0da8479e30d478, type: 2}
@@ -478,8 +482,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63941cd0537234fefbbcef5e0a8c3ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalWaveNumber: 20
-  avgWaveLength: 15
+  totalWaveNumber: 4
+  waveLength: 4
+  maxEnemyReleaseDelay: 5
+  waveDelay: 3
   playerMaxHP: 20
 --- !u!1 &1791674295
 GameObject:
